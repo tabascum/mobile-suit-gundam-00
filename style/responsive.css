@@ -1,0 +1,22 @@
+@media (max-width: 1120px) {
+  body {
+    display: grid;
+  }
+  .characters-selection {
+    flex-direction: column-reverse;
+    width: 80rem;
+    margin: 0 2rem;
+  }
+
+  .characters-selection .characters {
+    margin-block-start: 1.5rem;
+    width: 20%;
+  }
+
+  .characters-selection .characters .characters-title {
+    flex-wrap: wrap;
+  }
+
+  .characters-selection .character-list {
+  }
+}

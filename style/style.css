@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
+@import url("./responsive.css");
 
 *,
 *::after,
@@ -11,25 +12,27 @@
 :root {
   --primary: #1d935d;
   --secondary: #127b95;
+  --shadow: #959a9d;
+  --dark: #0e0e0e;
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #282828 url("/src/images/background.jpg") no-repeat center;
-  background-size: cover;
   color: var(--primary);
   font-family: "Orbitron", sans-serif;
   font-size: 1rem;
+  background: var(--dark) url("/src/images/background.jpg") no-repeat top;
+  background-size: cover;
   backdrop-filter: blur(0.2rem);
 }
 
 .page-title {
   display: inherit;
   justify-content: center;
-  width: 100%;
   max-height: 10rem;
+  width: 100%;
 }
 
 .page-title img {
@@ -37,29 +40,31 @@ body {
 }
 
 .characters-selection,
-.characters-selection .characters {
+.characters-selection .characters,
+.selected-characters {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .characters-selection {
-  padding: 0 5rem;
-  gap: 1.5rem;
+  padding: 0 4rem;
+  gap: 1rem;
+  min-height: calc(100vh - 160px);
 }
 
 .characters-selection .characters {
-  max-width: 50%;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
+  width: 50%;
 }
 
 .characters-selection .characters .characters-title {
-  width: 80%;
   text-align: center;
-  border-block-end: 0.1em solid var(--primary);
-  text-shadow: 0.3rem 0.3rem 0.3rem var(--secondary);
+  border-block-end: 0.1em solid var(--secondary);
+  text-shadow: 0.2rem 0.2rem 0.5rem var(--shadow);
+  background-color: var(--dark);
   letter-spacing: 0.4rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -70,35 +75,55 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 80%;
   list-style: none;
   gap: 1rem;
 }
 
+/* .characters-selection .characters-list .character.selected {
+  box-shadow: 0 0 1rem var(--primary);
+} */
+
 .characters-selection .characters-list .character {
-  height: 20%;
-  width: 19%;
-  align-items: center;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  filter: brightness(0.5);
+  transition: all 0.4s;
 }
 
-.characters-selection .characters-list .character.selected {
+.characters-selection .characters-list .character:hover {
   box-shadow: 0 0 1rem var(--primary);
+  filter: none;
+  cursor: pointer;
 }
 
 .characters-selection .characters-list .character img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+  border-radius: 0.5rem;
 }
 
 .selected-characters {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  max-width: 30%;
+  text-align: center;
 }
 
-.characters-selection .selected-characters .fullbody-character {
-  width: 60%;
+.selected-characters .fullbody-character {
+  height: auto;
+  width: 15rem;
+}
+
+.selected-characters .character-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+  color: var(--secondary);
+}
+
+.selected-characters .character-name {
+  margin-block: 1rem;
+  border-block-end: 0.1em solid var(--primary);
+  width: 80%;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
 }
