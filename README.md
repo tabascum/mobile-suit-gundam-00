@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Code URL: https://github.com/tabascum/mobile-suit-gundam-00
-- Live Site URL: tabascum-gundam-00.netlify.app
+- Live Site URL: https://tabascum-gundam-00.netlify.app/
 
 ### Built with
 
