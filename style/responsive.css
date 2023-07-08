@@ -1,22 +1,38 @@
 @media (max-width: 1120px) {
-  body {
-    display: grid;
+  .page-title img {
+    max-width: 15rem;
   }
   .characters-selection {
     flex-direction: column-reverse;
-    width: 80rem;
-    margin: 0 2rem;
+    font-size: 90%;
+    letter-spacing: 0;
   }
 
   .characters-selection .characters {
-    margin-block-start: 1.5rem;
-    width: 20%;
+    margin-block: 0.5rem;
+    text-align: center;
   }
 
-  .characters-selection .characters .characters-title {
-    flex-wrap: wrap;
+  .characters-selection .characters .characters-title,
+  .selected-characters .character-name {
+    font-size: 90%;
+    letter-spacing: normal;
   }
 
-  .characters-selection .character-list {
+  .characters-selection .characters-list .character img {
+    width: 6rem;
+  }
+
+  .selected-characters {
+    width: 60%;
+  }
+
+  .selected-characters .fullbody-character {
+    margin-block-end: 1rem;
+  }
+
+  .selected-characters .character-info {
+    max-width: 30rem;
+    background-color: var(--dark);
   }
 }

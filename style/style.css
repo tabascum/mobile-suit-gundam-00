@@ -10,10 +10,10 @@
 }
 
 :root {
-  --primary: #1d935d;
-  --secondary: #127b95;
-  --shadow: #959a9d;
-  --dark: #0e0e0e;
+  --primary: hsl(152.54, 67.05%, 34.51%);
+  --secondary: hsl(191.91, 78.44%, 32.75%);
+  --shadow: hsl(21.43, 8.14%, 90%);
+  --dark: hsl(0, 0%, 5.49%);
 }
 
 body {
@@ -50,24 +50,25 @@ body {
 .characters-selection {
   padding: 0 4rem;
   gap: 1rem;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 13rem);
+  margin-block-end: 3rem;
 }
 
 .characters-selection .characters {
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
-  width: 50%;
+  width: 80%;
 }
 
 .characters-selection .characters .characters-title {
   text-align: center;
   border-block-end: 0.1em solid var(--secondary);
-  text-shadow: 0.2rem 0.2rem 0.5rem var(--shadow);
   background-color: var(--dark);
   letter-spacing: 0.4rem;
   text-transform: uppercase;
   font-weight: 700;
+  padding: 0 0.5rem;
 }
 
 .characters-selection .characters .characters-list {
@@ -116,14 +117,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25rem;
-  color: var(--secondary);
+  max-width: 25rem;
+  padding: 0 0.5rem 0.5rem;
 }
 
 .selected-characters .character-name {
   margin-block: 1rem;
-  border-block-end: 0.1em solid var(--primary);
+  border-block-end: 0.1em solid var(--secondary);
   width: 80%;
   letter-spacing: 0.4rem;
   text-transform: uppercase;
+}
+
+.selected-characters .character-description {
+  color: var(--secondary);
 }
