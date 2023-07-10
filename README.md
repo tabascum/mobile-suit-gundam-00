@@ -1,4 +1,4 @@
-# DEV EM DOBRO - Interactive X-MEN Page
+# DEV EM DOBRO - Interactive X-MEN Project Inspiration
 
 This is my project inspired on the X-MEN page built during a event week with [DEV EM DOBRO](https://devemdobro.com/matriculas-abertas/), which helped me improve my coding skills by building realistic projects.
 
