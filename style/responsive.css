@@ -1,16 +1,14 @@
 @media (max-width: 1120px) {
   .page-title img {
-    max-width: 15rem;
+    max-width: 190px;
   }
   .characters-selection {
     flex-direction: column-reverse;
     font-size: 90%;
-    letter-spacing: 0;
   }
 
   .characters-selection .characters {
     margin-block: 0.5rem;
-    text-align: center;
   }
 
   .characters-selection .characters .characters-title,
@@ -24,15 +22,19 @@
   }
 
   .selected-characters {
-    width: 60%;
+    width: 85%;
   }
 
   .selected-characters .fullbody-character {
     margin-block-end: 1rem;
   }
 
+  .selected-characters .fullbody-character img {
+    width: 80px;
+    height: 80px;
+  }
+
   .selected-characters .character-info {
-    max-width: 30rem;
     background-color: var(--dark);
   }
 }

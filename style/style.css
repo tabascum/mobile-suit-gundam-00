@@ -32,7 +32,7 @@ body {
   display: inherit;
   justify-content: center;
   max-height: 10rem;
-  width: 100%;
+  max-width: 100%;
 }
 
 .page-title img {
@@ -105,8 +105,8 @@ body {
 }
 
 .selected-characters .fullbody-character {
-  height: 25rem;
-  width: 25rem;
+  height: 20rem;
+  width: 20rem;
   mix-blend-mode: multiply;
 }
 
